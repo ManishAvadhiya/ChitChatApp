@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 export const apiClient = axios.create({
-    baseURL:HOST,
+    baseURL:import.meta.env.MODE === "development" ? "http://localhost:4000" : "",
 
 });
 
