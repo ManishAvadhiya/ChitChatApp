@@ -16,7 +16,7 @@ const port = process.env.PORT || 4000;
 const databaseURL = process.env.DATABASE_URL;
 
 app.use(cors({
-  origin: 'http://localhost:5173', // Frontend URL
+  origin: [process.env.ORIGIN], // Frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH'], // Allowed methods
   credentials: true // Allow cookies or credentials
 }));
